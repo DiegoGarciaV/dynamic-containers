@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-
+import Header from './components/headers/top-header/TopHeader';
+import Footer from './components/footers/footer/Fotter';
+import Home from './pages/home/Home';
+import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
+import EditableContainer from './components/containers/paragraph-container/Container';
+import { ContentProvider } from './components/contexts/Contexts';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header></Header>
+        <main>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <ContentProvider>
+            <h1>Editable Containers</h1>
+            <EditableContainer containerId="ASDQWE" />
+            <EditableContainer containerId="HGFWEG" />
+            <EditableContainer containerId="JKHERS" />
+          </ContentProvider>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+
   );
 }
 
