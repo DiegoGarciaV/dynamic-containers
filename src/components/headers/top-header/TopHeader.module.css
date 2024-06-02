@@ -1,0 +1,24 @@
+.navContainer
+{
+    background-color: var(--color-7) !important;
+}
+.navVar
+{
+    justify-content: right;
+}
+.navVarItem
+{
+    margin-left: 2rem;
+    color: #fff !important;
+}
+@media (max-width:1200px) {
+    .navVarItem
+    {
+        margin-left: 0.5rem;
+    }
+}
+
+.navbar-nav .dropdown-menu
+{
+    background-color: var(--color-7) !important;
+}
