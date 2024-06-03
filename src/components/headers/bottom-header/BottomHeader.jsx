@@ -29,10 +29,10 @@ const BottomHeader = () => (
               <NavDropdown.Item href="#action/3.3">Geografía Aplicada</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="#home" className={styles.navVarItem}>Educación Continua</Nav.Link>
-            <Nav.Link href="#home" className={styles.navVarItem}>Alumnado</Nav.Link>
-            <Nav.Link href="#home" className={styles.navVarItem}>Académicos de Carrera</Nav.Link>
-            <Nav.Link href="#home" className={styles.navVarItem}>Servicios</Nav.Link>
+            <Nav.Link href="/" className={styles.navVarItem}>Educación Continua</Nav.Link>
+            <Nav.Link href="/alumnado" className={styles.navVarItem}>Alumnado</Nav.Link>
+            <Nav.Link href="/academicos" className={styles.navVarItem}>Académicos de Carrera</Nav.Link>
+            <Nav.Link href="/servicios" className={styles.navVarItem}>Servicios</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

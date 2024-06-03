@@ -1,0 +1,24 @@
+.mainContainer
+{
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    max-height: 100vh;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+.lateralMenu
+{
+    width: 30%;
+    height: 100%;
+}
+
+.spaContent
+{
+    padding: 2rem;
+    flex-grow: 1;
+}

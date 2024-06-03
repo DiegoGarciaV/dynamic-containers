@@ -10,11 +10,11 @@ const Header = () => (
   <div className={`${styles.navContainer} top-nav`}>
     <Navbar variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#home"></Navbar.Brand>
+        <Navbar.Brand href="/"></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-dark-example" />
         <Navbar.Collapse className={styles.navVar}>
           <Nav>
-            <Nav.Link href="#home" className={styles.navVarItem}>Nosotros</Nav.Link>
+            <Nav.Link href="nosotros" className={styles.navVarItem}>Nosotros</Nav.Link>
             <NavDropdown
               id="nav-dropdown-nosotros"
               title="Secretaria General"
@@ -28,9 +28,9 @@ const Header = () => (
               <NavDropdown.Item href="#action/3.3">Actividades Culturales</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="#home" className={styles.navVarItem}>Cuerpos Colegiados</Nav.Link>
-            <Nav.Link href="#home" className={styles.navVarItem}>Administración</Nav.Link>
-            <Nav.Link href="#home" className={styles.navVarItem}>Igualdad de Género</Nav.Link>
+            <Nav.Link href="/" className={styles.navVarItem}>Cuerpos Colegiados</Nav.Link>
+            <Nav.Link href="/" className={styles.navVarItem}>Administración</Nav.Link>
+            <Nav.Link href="/" className={styles.navVarItem}>Igualdad de Género</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

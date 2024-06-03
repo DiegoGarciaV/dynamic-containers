@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Contact = () => (
+const Services = () => (
   <div>
-    <h1>Contact Page</h1>
+    <h1>Services Page</h1>
     {/* Contenido adicional */}
   </div>
 );
 
-export default Contact;
+export default Services;

@@ -1,0 +1,38 @@
+.menuContainer
+{
+    text-align: left;
+    background-color: var(--color-0);
+    color: var(--color-1);
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0rem;
+    overflow-y: auto;
+}
+
+.menuList 
+{
+    padding: 0;
+    margin: 0;
+}
+
+.menuItem
+{
+    list-style: none;
+    font-size: var(--font-size-sm) !important;
+    padding: 0;
+}
+
+.menuLink:hover
+{
+    background-color: var(--color-5);
+}
+
+.menuLink
+{
+    text-decoration: none;
+    color: var(--color-1);
+    font-weight: 300;
+    padding: 1rem 1rem 1rem 2rem;
+    box-sizing: content-box;
+    display: block;
+}

@@ -5,9 +5,14 @@ import BottomHeader from './components/headers/bottom-header/BottomHeader'
 import Footer from './components/footers/footer/Fotter';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
-import Contact from './pages/contact/Contact';
-import EditableContainer from './components/containers/paragraph-container/Container';
-import { ContentProvider } from './components/contexts/Contexts';
+import AcademicOffer from './pages/academic-offer/AcademicOffer'
+import AcademicServices from './pages/academic-services/AcademicServices'
+import Services from './pages/services/Services'
+import Faculties from './pages/faculties/Faculties'
+import Introduction from './spa/academic-services/Introduction';
+import Movility from './spa/academic-services/Movility';
+import Social from './spa/academic-services/Social';
+import Practices from './spa/academic-services/Practices';
 function App() {
   return (
     <Router>
@@ -19,15 +24,19 @@ function App() {
         <main>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/licenciaturas" element={<AcademicOffer />} />
+            <Route path="/nosotros" element={<About />} />
+            <Route path="/servicios" element={<Services />} />
+            <Route path="/alumnado" element={<AcademicServices />} >
+              <Route path="escolares" element={<Introduction />} />
+              <Route path="movilidad" element={<Movility />} />
+              <Route path="social" element={<Social />} />
+              <Route path="profesionales" element={<Practices />} />
+            </Route>
+            <Route path="/academicos" element={<Faculties />} />
+            <Route path="/nosotros" element={<About />} />
+
           </Routes>
-          <ContentProvider>
-            <h1>Editable Containers</h1>
-            <EditableContainer containerId="ASDQWE" />
-            <EditableContainer containerId="HGFWEG" />
-            <EditableContainer containerId="JKHERS" />
-          </ContentProvider>
         </main>
         <Footer />
       </div>
