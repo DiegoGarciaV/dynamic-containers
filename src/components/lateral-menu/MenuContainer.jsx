@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Menu.module.css'
+import PropTypes from 'prop-types';
 
 const MenuContainer = ({ children }) => {
   return (
@@ -13,4 +14,7 @@ const MenuContainer = ({ children }) => {
   );
 };
 
+MenuContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 export default MenuContainer;

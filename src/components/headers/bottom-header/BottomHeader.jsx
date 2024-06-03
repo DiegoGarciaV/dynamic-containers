@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo512 from '../../../assets/imgs/logo.png'
 import logo from '../../../assets/imgs/logo_unam.png'
 import styles from './BottomHeader.module.css'
+import { Link } from 'react-router-dom';
 
 const BottomHeader = () => (
   <div className={`${styles.navContainer} bottom-nav`}>
@@ -25,14 +26,14 @@ const BottomHeader = () => (
               menuVariant="dark"
               className={styles.navVarItem}
             >
-              <NavDropdown.Item href="">Ciencias de la Tierra</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Geografía Aplicada</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/">Ciencias de la Tierra</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/">Geografía Aplicada</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="/" className={styles.navVarItem}>Educación Continua</Nav.Link>
-            <Nav.Link href="/alumnado" className={styles.navVarItem}>Alumnado</Nav.Link>
-            <Nav.Link href="/academicos" className={styles.navVarItem}>Académicos de Carrera</Nav.Link>
-            <Nav.Link href="/servicios" className={styles.navVarItem}>Servicios</Nav.Link>
+            <Nav.Link as={Link} to="/" className={styles.navVarItem}>Educación Continua</Nav.Link>
+            <Nav.Link as={Link} to="/alumnado" className={styles.navVarItem}>Alumnado</Nav.Link>
+            <Nav.Link as={Link} to="/academicos" className={styles.navVarItem}>Académicos de Carrera</Nav.Link>
+            <Nav.Link as={Link} to="/servicios" className={styles.navVarItem}>Servicios</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
