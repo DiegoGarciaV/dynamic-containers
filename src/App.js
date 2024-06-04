@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/headers/top-header/TopHeader';
-import BottomHeader from './components/headers/bottom-header/BottomHeader'
+import Header from './components/headers/TopHeader/TopHeader';
+import BottomHeader from './components/headers/BottomHeader/BottomHeader'
 import Footer from './components/footers/footer/Fotter';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
-import AcademicOffer from './pages/academic-offer/AcademicOffer'
-import AcademicServices from './pages/academic-services/AcademicServices'
+import AcademicOffer from './pages/AcademicOffer/AcademicOffer'
+import AcademicServices from './pages/AcademicServices/AcademicServices'
 import Services from './pages/services/Services'
 import Faculties from './pages/faculties/Faculties'
 import Introduction from './spa/academic-services/school-services/Introduction';
@@ -63,7 +63,6 @@ function App() {
               </Route>
               <Route path="/academicos" element={<Faculties />} />
               <Route path="/nosotros" element={<About />} />
-
             </Routes>
           </main>
         </div>

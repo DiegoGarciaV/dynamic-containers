@@ -1,10 +1,18 @@
 import React from 'react';
+import AbstractPage from '../AbstractPage/AbstractPage';
 
-const About = () => (
-  <div>
-    <h1>About Page</h1>
-    {/* Contenido adicional */}
-  </div>
-);
+const About = () => {
+  const menuTree = [
+    {
+      itemLabel: "Opcion 1",
+      itemResource: "/"
+    },
+    {
+      itemLabel: "Opcion 2",
+      itemResource: "/"
+    },
+  ]
+  return <AbstractPage menuTree={menuTree} />
+};
 
 export default About;
