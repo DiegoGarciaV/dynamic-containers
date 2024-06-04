@@ -10,7 +10,9 @@
 {
     margin-left: 2rem;
     color: #fff !important;
+    font-weight: 300 !important;
 }
+
 @media (max-width:1200px) {
     .navVarItem
     {

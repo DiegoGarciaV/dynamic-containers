@@ -13,10 +13,47 @@
     --color-7: rgb(153,153,153);
 }
 
+
+@media (min-width: 500px) {
+  :root
+  {
+      --space-lg: 6rem;
+      --space-md: 4rem;
+      --space-sm: 2rem;
+      --space-xs: 1rem;
+      --space-xxs: 0.5rem;
+
+      --font-size-lg: 6rem;
+      --font-size-ml: 4rem;
+      --font-size-md: 2rem;
+      --font-size-sm: 1.4rem;
+      --font-size-xs: 1rem;
+      
+      
+  }
+}
+
+@media (max-width: 500px) {
+  :root
+  {
+      --space-lg: 4rem;
+      --space-md: 3rem;
+      --space-sm: 2rem;
+      --space-xs: 1rem;
+
+      --font-size-lg: 4rem;
+      --font-size-ml: 3rem;
+      --font-size-md: 2rem;
+      --font-size-sm: 1.2rem;
+      --font-size-xs: 1rem;
+      
+      
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Roboto Slab', serif !important;
-  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -38,4 +75,38 @@ code {
 .top-nav a, .bottom-nav a
 {
   color: #fff;
+}
+
+.accordion-item, .accordion-button
+{
+  background-color: transparent !important;
+  color: var(--color-1) !important;
+  font-weight: 300 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-size: var(--font-size-sm) !important;
+}
+
+
+.full-page-container
+{
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure it takes the full viewport height */
+  overflow: hidden; /* Prevent overflow from expanding the viewport */
+}
+
+.full-page-container header
+{
+  flex-shrink: 0;
+}
+.full-page-container main
+{
+  flex: 1;
+}
+
+.spa-container
+{
+  flex: 1;
+  overflow-y: auto; 
 }

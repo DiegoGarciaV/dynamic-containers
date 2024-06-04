@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useContent } from '../contexts/Contexts';
+import { useContent } from '../contexts/DynamicContent';
 
 const AbstractContainer = ({ containerId }) => {
   const { content, saveChanges } = useContent();
