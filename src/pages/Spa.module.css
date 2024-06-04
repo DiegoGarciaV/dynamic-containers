@@ -1,0 +1,43 @@
+.mainContainer
+{
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
+    flex: 1;
+}
+
+.lateralMenu
+{
+    width: 20%;
+    height: auto;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.spaContent
+{
+    padding: 0;
+    flex: 1;
+    background: url('../assets/imgs/backgrounds/spa_texture.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: auto;
+    height: auto;
+}
+
+.spaInnerContent
+{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    background-color: var(--color-1);
+    box-sizing: border-box;
+    padding: 1px;
+}

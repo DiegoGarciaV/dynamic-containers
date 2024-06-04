@@ -4,8 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import logo512 from '../../../assets/imgs/logo.png'
-import logo from '../../../assets/imgs/logo_unam.png'
+import encit_logo from '../../../assets/imgs/logos/logo.png'
+import unam_logo from '../../../assets/imgs/logos/logo_unam.png'
 import styles from './BottomHeader.module.css'
 import { Link } from 'react-router-dom';
 
@@ -13,9 +13,9 @@ const BottomHeader = () => (
   <div className={`${styles.navContainer} bottom-nav`}>
     <Navbar variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#home">
-          <img className={`${styles.headerLogo} me-3`} src={logo} alt="UNAM"/>
-          <img className={`${styles.headerLogo} me-3`} src={logo512} alt="ENCIT"/>
+        <Navbar.Brand href="/">
+          <img className={`${styles.headerLogo} me-3`} src={unam_logo} alt="UNAM"/>
+          <img className={`${styles.headerLogo} me-3`} src={encit_logo} alt="ENCIT"/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-dark-example" />
         <Navbar.Collapse className={styles.navVar}>

@@ -17,4 +17,5 @@ const MenuContainer = ({ children }) => {
 MenuContainer.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
 export default MenuContainer;

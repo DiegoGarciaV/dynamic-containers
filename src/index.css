@@ -86,3 +86,27 @@ code {
   padding: 0 !important;
   font-size: var(--font-size-sm) !important;
 }
+
+
+.full-page-container
+{
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure it takes the full viewport height */
+  overflow: hidden; /* Prevent overflow from expanding the viewport */
+}
+
+.full-page-container header
+{
+  flex-shrink: 0;
+}
+.full-page-container main
+{
+  flex: 1;
+}
+
+.spa-container
+{
+  flex: 1;
+  overflow-y: auto; 
+}

@@ -3,22 +3,6 @@ import styles from './Menu.module.css'
 import Accordion from 'react-bootstrap/Accordion';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// const MenuItem = ({ label, to, children }) => {
-//   return (
-//     <li className={styles.menuItem}>
-//       {to ? (
-//         <a className={styles.menuLink} href={to}>{label}</a>
-//       ) : (
-//         <>
-//           <span>{label}</span>
-//           <ul>
-//             {children}
-//           </ul>
-//         </>
-//       )}
-//     </li>
-//   );
-// };
 
 const MenuItem = ({ label, to, children }) => {
   return (
@@ -43,7 +27,7 @@ const MenuItem = ({ label, to, children }) => {
 MenuItem.propTypes = {
   label: PropTypes.string.isRequired,
   to: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default MenuItem;
