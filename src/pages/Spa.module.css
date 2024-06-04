@@ -36,6 +36,7 @@
 {
     width: 80%;
     height: auto;
+    min-height: 100%;
     margin: 0 auto;
     background-color: var(--color-1);
     box-sizing: border-box;

@@ -28,8 +28,8 @@ const Header = () => (
               <NavDropdown.Item as={Link} to="/">Actividades Culturales</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link as={Link} to="/alumnado/escolares" className={styles.navVarItem}>Cuerpos Colegiados</Nav.Link>
-            <Nav.Link as={Link} to="/alumnado/movilidad" className={styles.navVarItem}>Administración</Nav.Link>
+            <Nav.Link as={Link} to="/" className={styles.navVarItem}>Cuerpos Colegiados</Nav.Link>
+            <Nav.Link as={Link} to="/" className={styles.navVarItem}>Administración</Nav.Link>
             <Nav.Link as={Link} to="/" className={styles.navVarItem}>Igualdad de Género</Nav.Link>
             
           </Nav>
