@@ -26,7 +26,11 @@ import QnA from './spa/academic-services/school-services/QnA'
 import Reinscription from './spa/academic-services/school-services/Reinscription'
 import Suspension from './spa/academic-services/school-services/Suspension'
 import Title from './spa/academic-services/school-services/Title'
-
+import Background from './spa/about/Background'
+import Values from './spa/about/Values'
+import OrganizationChart from './spa/about/OrganizationChart'
+import Directory from './spa/about/Directory'
+import Management from './spa/about/Management'
 function App() {
   return (
     <Router>
@@ -62,7 +66,13 @@ function App() {
                 <Route path="bolsa-trabajo" element={<JobBoard />} />
               </Route>
               <Route path="/academicos" element={<Faculties />} />
-              <Route path="/nosotros" element={<About />} />
+              <Route path="/nosotros" element={<About />} >
+                <Route path="/nosotros/antecedentes" element={<Background />} />
+                <Route path="/nosotros/valores" element={<Values />} />
+                <Route path="/nosotros/organigrama" element={<OrganizationChart />} />
+                <Route path="/nosotros/directorio" element={<Directory/>} />
+                <Route path="/nosotros/gestion" element={<Management/>} />
+              </Route>
             </Routes>
           </main>
         </div>
