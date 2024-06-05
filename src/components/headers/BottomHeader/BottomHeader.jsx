@@ -15,7 +15,7 @@ const BottomHeader = () => (
       <Container fluid>
         <Navbar.Brand href="/">
           <img className={`${styles.headerLogo} me-3`} src={unam_logo} alt="UNAM"/>
-          <img className={`${styles.headerLogo} me-3`} src={encit_logo} alt="ENCIT"/>
+          <img className={`${styles.headerLogo} mx-3`} src={encit_logo} alt="ENCIT"/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-dark-example" />
         <Navbar.Collapse className={styles.navVar}>

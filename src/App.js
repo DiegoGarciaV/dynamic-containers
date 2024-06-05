@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/headers/TopHeader/TopHeader';
 import BottomHeader from './components/headers/BottomHeader/BottomHeader'
-import Footer from './components/footers/footer/Fotter';
+import Footer from './components/footers/footer/Footer';
 import Home from './pages/home/Home';
 import AcademicOffer from './pages/AcademicOffer/AcademicOffer'
 import Services from './pages/services/Services'

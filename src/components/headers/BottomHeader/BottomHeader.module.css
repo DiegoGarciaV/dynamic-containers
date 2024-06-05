@@ -5,6 +5,7 @@
 .navContainer
 {
     background-color: var(--color-2) !important;
+    padding: 0 2rem;
 }
 .navVar
 {

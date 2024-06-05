@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../../pages/Spa.module.css'
 
 const Certificates = () => (
   <div>
-    <h1>Certificates Page</h1>
+    <h1 className={styles.spaTitle}>Certificates Page</h1>
   </div>
 );
 

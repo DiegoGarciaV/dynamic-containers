@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import AcademicServices from './AcademicServices'
 import Introduction from '../../spa/academic-services/school-services/Introduction';
 import Movility from '../../spa/academic-services/movility/Movility';

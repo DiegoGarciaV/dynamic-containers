@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Background from '../../spa/about/Background'
 import Values from '../../spa/about/Values'
 import OrganizationChart from '../../spa/about/OrganizationChart'
