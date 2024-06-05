@@ -22,7 +22,7 @@ function App() {
           </header>
           <main className="spa-container">
             <Routes >
-              <Route exact path="/" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/licenciaturas" element={<AcademicOffer />} />
               <Route path="/servicios" element={<Services />} />
               <Route path="/alumnado/*" element={<AcademicServicesRouter />} />
