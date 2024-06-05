@@ -11,7 +11,7 @@ const AcademicServices = () => {
                 {
                     id: 0,
                     itemLabel: "Presentación",
-                    itemResource: "/alumnado/escolares"
+                    itemResource: "/alumnado"
                 },
                 {
                     id: 1,
