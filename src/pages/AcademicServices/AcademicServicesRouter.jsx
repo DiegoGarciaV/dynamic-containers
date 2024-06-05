@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AcademicServices from './AcademicServices'
 import Introduction from '../../spa/academic-services/school-services/Introduction';
 import Movility from '../../spa/academic-services/movility/Movility';
@@ -22,8 +22,8 @@ import Title from '../../spa/academic-services/school-services/Title'
 const AcademicServicesRouter = () => (
 
     <Routes>
-        <Route path="/alumnado" element={<AcademicServices />}>
-            <Route path="" element={<Introduction />} />
+        <Route path="/" element={<AcademicServices />}>
+            <Route index element={<Introduction />} />
             <Route path="escolares/admision" element={<Admission />} />
             <Route path="escolares/inscripcion" element={<Inscription />} />
             <Route path="escolares/reinscripcion" element={<Reinscription />} />

@@ -11,23 +11,17 @@ const Footer = () => (
       <div className="container-fluid">
         <div className={`row ${styles.footerFlexColumn}`}>
           <div className="col col-12">
-            <div className="row">
+            <div className="row justify-content-between">
               <div className="col-12 col-lg-6">
-                <p>Hecho en México, Universidad Nacional Autónoma de México (UNAM), todos los derechos reservados 2019.
+                <p className={styles.footerText}>Hecho en México, Universidad Nacional Autónoma de México (UNAM), todos los derechos reservados 2019.
                   Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la fuente completa y su dirección electrónica.
                   De otra forma, requiere permiso previo por escrito de la institución.</p>
               </div>
-              <div className="col-12 col-lg-5">
-                <p className="text-center">
-                </p>
-                <div className="address-data">
-                  <div className="row">
-                    <div className={`col-3 ${styles.vAl}`}><a href="https://www.facebook.com/UNAM.ENCIT" className={styles.iconSocial}><img className={styles.iconSocialImg} src={fbLogo} alt="Facebook" /></a></div>
-                    <div className={`col-3 ${styles.vAl}`}><a href="https://www.instagram.com/encit_unam/" className={styles.iconSocial}><img className={styles.iconSocialImg} src={igLogo} alt="Instagram" /></a></div>
-                    <div className={`col-3 ${styles.vAl}`}><a href="https://twitter.com/UNAM_MX" className={styles.iconSocial}><img className={styles.iconSocialImg} src={twLogo} alt="Twitter" /></a></div>
-                    <div className={`col-3 ${styles.vAl}`}><a href="https://www.youtube.com/@encit-escuelanacionaldecie1297" className={styles.iconSocial}><img className={styles.iconSocialImg} src={ytLogo} alt="Youtube" /></a></div>
-                  </div>
-                </div>
+              <div className={`col-12 col-lg-6 ${styles.socialIcons}`}>
+                <div className={`col-3 ${styles.vAl}`}><a href="https://www.facebook.com/UNAM.ENCIT" className={styles.iconSocial}><img className={styles.iconSocialImg} src={fbLogo} alt="Facebook" /></a></div>
+                <div className={`col-3 ${styles.vAl}`}><a href="https://www.instagram.com/encit_unam/" className={styles.iconSocial}><img className={styles.iconSocialImg} src={igLogo} alt="Instagram" /></a></div>
+                <div className={`col-3 ${styles.vAl}`}><a href="https://twitter.com/UNAM_MX" className={styles.iconSocial}><img className={styles.iconSocialImg} src={twLogo} alt="Twitter" /></a></div>
+                <div className={`col-3 ${styles.vAl}`}><a href="https://www.youtube.com/@encit-escuelanacionaldecie1297" className={styles.iconSocial}><img className={styles.iconSocialImg} src={ytLogo} alt="Youtube" /></a></div>
               </div>
             </div>
 
@@ -46,13 +40,9 @@ const Footer = () => (
           </div>
           <div className="col-12">
             <div className={styles.footerData}>
-              <div className="container-fluid">
-                <div className="row justify-content-arround">
                   <div className={`col-12 col-md-3 ${styles.iconLink}`}><a href="http://encit.unam.mx/sites/default/files/2022-08/aviso_privacidad.pdf" className={styles.iconLinkA}>Aviso de Privacidad Integral</a></div>
                   <div className={`col-12 col-md-3 ${styles.iconLink}`}><a href="http://www.transparencia.unam.mx/" className={styles.iconLinkA}>Portal de Transparencia Universitaria</a></div>
                   <div className={`col-12 col-md-3 ${styles.iconLink}`}><a href="https://www.plataformadetransparencia.org.mx/" className={styles.iconLinkA}>Plataforma Nacional de Transparencia</a></div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

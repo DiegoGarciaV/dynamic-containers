@@ -6,7 +6,7 @@ const About = () => {
     {
       id: 0,
       itemLabel: "Antecedentes",
-      itemResource: "/nosotros/antecedentes"
+      itemResource: "/nosotros/"
     },
     {
       id: 2,

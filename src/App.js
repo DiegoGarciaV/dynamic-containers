@@ -25,9 +25,9 @@ function App() {
               <Route exact path="/" element={<Home />} />
               <Route path="/licenciaturas" element={<AcademicOffer />} />
               <Route path="/servicios" element={<Services />} />
-              <Route path="/*" element={<AcademicServicesRouter />} />
+              <Route path="/alumnado/*" element={<AcademicServicesRouter />} />
               <Route path="/academicos" element={<Faculties />} />
-              <Route path="/*" element={<AboutRouter />} />
+              <Route path="/nosotros/*" element={<AboutRouter />} />
             </Routes>
           </main>
         </div>
