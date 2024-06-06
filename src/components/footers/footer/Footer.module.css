@@ -74,6 +74,22 @@
     max-height: 4rem;
 }
 
+@media (max-width: 600px)
+{
+    .iconSocialImg{
+
+        max-height: 3rem;
+    }
+}
+
+@media (max-width: 360px)
+{
+    .iconSocialImg{
+
+        max-height: 2rem;
+    }
+}
+
 
 .vAl
 {

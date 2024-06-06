@@ -8,11 +8,10 @@ import ytLogo from '../../../assets/imgs/social-media/Youtube_logo.png'
 const Footer = () => (
   <footer className={styles.footer}>
     <div className={styles.colorFilm}>
-      <div className="container-fluid">
         <div className={`row ${styles.footerFlexColumn}`}>
           <div className="col col-12">
             <div className="row justify-content-between">
-              <div className="col-12 col-lg-6">
+              <div className="col-12 col-lg-6 py-3">
                 <p className={styles.footerText}>Hecho en México, Universidad Nacional Autónoma de México (UNAM), todos los derechos reservados 2019.
                   Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la fuente completa y su dirección electrónica.
                   De otra forma, requiere permiso previo por escrito de la institución.</p>
@@ -24,8 +23,8 @@ const Footer = () => (
                 <div className={`col-3 ${styles.vAl}`}><a href="https://www.youtube.com/@encit-escuelanacionaldecie1297" className={styles.iconSocial}><img className={styles.iconSocialImg} src={ytLogo} alt="Youtube" /></a></div>
               </div>
             </div>
-
           </div>
+          
           <hr className="my-4" />
           <div className="col-12">
             <p>
@@ -39,14 +38,14 @@ const Footer = () => (
             </p>
           </div>
           <div className="col-12">
-            <div className={styles.footerData}>
+            <div className={`row ${styles.footerData}`}>
                   <div className={`col-12 col-md-3 ${styles.iconLink}`}><a href="http://encit.unam.mx/sites/default/files/2022-08/aviso_privacidad.pdf" className={styles.iconLinkA}>Aviso de Privacidad Integral</a></div>
                   <div className={`col-12 col-md-3 ${styles.iconLink}`}><a href="http://www.transparencia.unam.mx/" className={styles.iconLinkA}>Portal de Transparencia Universitaria</a></div>
                   <div className={`col-12 col-md-3 ${styles.iconLink}`}><a href="https://www.plataformadetransparencia.org.mx/" className={styles.iconLinkA}>Plataforma Nacional de Transparencia</a></div>
             </div>
           </div>
+
         </div>
-      </div>
     </div>
   </footer>);
 
