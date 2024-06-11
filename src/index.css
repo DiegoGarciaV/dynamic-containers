@@ -92,8 +92,8 @@ code {
 {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ensure it takes the full viewport height */
-  overflow: hidden; /* Prevent overflow from expanding the viewport */
+  height: 100vh; 
+  overflow: hidden; 
 }
 
 .full-page-container header
@@ -109,4 +109,13 @@ code {
 {
   flex: 1;
   overflow-y: auto; 
+}
+
+.container-title
+{
+    font-size: var(--font-size-ml);
+    font-weight: 300;
+    color: var(--color-2);
+    text-align: center;
+    padding-top: 2rem;
 }

@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../../pages/Spa.module.css'
 
 const Imss = () => (
   <div>
-    <h1>IMSS Page</h1>
+    <h1 className={styles.spaTitle}>IMSS Page</h1>
   </div>
 );
 

@@ -1,0 +1,24 @@
+.carouselImg
+{
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.bluredCover
+{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px) contrast(75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselItem
+{
+    height: 75vh;
+    background-color: var(--color-7);
+    background-size: cover;
+    background-position: center;
+}
