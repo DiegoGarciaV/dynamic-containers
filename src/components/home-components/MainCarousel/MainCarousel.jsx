@@ -2,7 +2,6 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import PropTypes from "prop-types";
 import styles from "./MainCarousel.module.css";
-import { isElementType } from "@testing-library/user-event/dist/utils";
 
 const MainCarousel = ({ items }) => {
   return (

@@ -29,9 +29,10 @@ function App() {
               <Route path="/academicos" element={<Faculties />} />
               <Route path="/nosotros/*" element={<AboutRouter />} />
             </Routes>
+            
+            <Footer />
           </main>
         </div>
-        <Footer />
       </div>
     </Router>
 
