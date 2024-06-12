@@ -14,7 +14,12 @@ const AbstractContainer = ({ containerId, children }) => {
   };
 
   const handleChange = (event) => {
-    setLocalContent(event.target.value);
+    setLocalContent(
+      {
+        containerType: localContent.containerType,
+        content: event.target.value
+      }
+    );
   };
 
   const handleSaveChanges = () => {
@@ -61,7 +66,7 @@ const AbstractContainer = ({ containerId, children }) => {
           <textarea
             type="text"
             className={styles.contentInput}
-            value={localContent}
+            value={localContent.content}
             onChange={handleChange}
             autoFocus
           />
@@ -71,7 +76,7 @@ const AbstractContainer = ({ containerId, children }) => {
             </div>
         </div>
 
-      ) : children(localContent)}
+      ) : children(localContent.content)}
     </div>
   );
 };
