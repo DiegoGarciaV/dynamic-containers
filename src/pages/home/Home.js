@@ -1,7 +1,7 @@
 import React from 'react';
 import MainCarousel from '../../components/home-components/MainCarousel/MainCarousel';
 import InPageCarousel from '../../components/InPageCarousel/InPageCarousel';
-
+import ParagraphContainer from '../../components/containers/ParagraphContainer/ParagraphContainer'
 const mock_carousel = [
   {
     id: 0,
@@ -93,6 +93,12 @@ const events = [
 const Home = () => (
   <div>
     <MainCarousel items={mock_carousel}></MainCarousel>
+    <div className='cover-container'>
+      <div className='container-fluid h-100'>
+        <h2 className="container-title">Escuela Nacional de Ciencias de la Tierra</h2>
+        <ParagraphContainer containerId='JKHERS'></ParagraphContainer>
+      </div>
+    </div>
     <div className='cover-container'>
       <div className='container-fluid h-100'>
         <h2 className="container-title">Avisos</h2>

@@ -1,0 +1,40 @@
+.editContainer
+{
+    width: 100%;
+    position: relative;
+    background-color: #e4eaf9;
+}
+
+.contentType
+{
+    width: 20rem;
+    max-width: 100%;
+    padding: 0.35rem 0.25rem;
+    margin-bottom: var(--space-xxs);
+    border: none;
+    background-color: var(--color-2);
+    color: var(--color-1);
+    border-radius: 5px;
+}
+
+.saveButton
+{
+    width: 10rem;
+    max-width: 100%;
+    border: none;
+    font-size: var(--font-size-xs);
+    padding: var(--space-xxs);
+    background-color: var(--color-0);
+    color: var(--color-1);
+    border-radius: 5px;
+}
+
+.contentInput
+{
+    width: 98%;
+    margin: 1rem auto;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 0.5rem;
+}

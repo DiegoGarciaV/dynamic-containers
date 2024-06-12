@@ -10,7 +10,7 @@ export const ContentProvider = ({ children }) => {
     const [content, setContent] = useState({
         "ASDQWE": 'This is editable content for first element',
         "HGFWEG": 'This is editable content for second element',
-        "JKHERS": 'This is editable content for third element',
+        "JKHERS": 'La Escuela Nacional de Ciencias de la Tierra (ENCiT) tiene como objetivo formar profesionales capacitados para abordar los procesos terrestres relacionados con la exploración y gestión de los recursos naturales, así como los impactos ambientales de los procesos atmosféricos, oceánicos y de los cuerpos acuáticos. También se busca desarrollar habilidades en la exploración del espacio.',
     });
 
     const saveChanges = async (id, newContent) => {

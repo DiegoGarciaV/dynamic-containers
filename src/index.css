@@ -40,6 +40,7 @@
       --space-md: 3rem;
       --space-sm: 2rem;
       --space-xs: 1rem;
+      --space-xxs: 0.5rem;
 
       --font-size-lg: 4rem;
       --font-size-ml: 3rem;
@@ -118,4 +119,19 @@ code {
     color: var(--color-2);
     text-align: center;
     padding-top: 2rem;
+}
+
+.left-aligned
+{
+  text-align: left;
+}
+
+.right-aligned
+{
+  text-align: right;
+}
+
+p
+{
+  text-align: justify !important;
 }
