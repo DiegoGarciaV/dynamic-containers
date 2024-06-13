@@ -40,6 +40,7 @@
       --space-md: 3rem;
       --space-sm: 2rem;
       --space-xs: 1rem;
+      --space-xxs: 0.5rem;
 
       --font-size-lg: 4rem;
       --font-size-ml: 3rem;
@@ -118,4 +119,44 @@ code {
     color: var(--color-2);
     text-align: center;
     padding-top: 2rem;
+}
+
+.left-aligned
+{
+  text-align: left;
+}
+
+.right-aligned
+{
+  text-align: right;
+}
+
+p
+{
+  text-align: justify !important;
+}
+
+.enfac-text-1{
+  color: var(--color-5) !important;
+  font-weight: 600 !important;
+}
+
+.enfac-text-2{
+  color: var(--color-3) !important;
+  font-weight: 600 !important;
+}
+
+.enfac-text-bl{
+  color: #000 !important;
+  font-weight: 600 !important;
+}
+.cover-container
+{
+  padding-top: var(--space-lg);
+}
+
+.cover-container p {
+  text-align: justify;
+  font-size: var(--font-size-sm);
+  font-weight: 300;
 }

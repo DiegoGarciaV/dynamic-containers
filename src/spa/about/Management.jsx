@@ -3,7 +3,7 @@ import styles from '../../pages/Spa.module.css'
 
 const Managment = () => (
   <div>
-    <h1 className={styles.spaTitle}>Managment Page</h1>
+    <h1 className={styles.spaTitle}>Management Page</h1>
   </div>
 );
 

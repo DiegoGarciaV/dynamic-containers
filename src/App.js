@@ -10,31 +10,38 @@ import Faculties from './pages/faculties/Faculties'
 
 import AcademicServicesRouter from './pages/AcademicServices/AcademicServicesRouter'
 import AboutRouter from './pages/about/AboutRouter';
+import ScrollToTop from './components/ScrollTop/ScrollTop';
+
+import { ContentProvider } from './components/contexts/DynamicContent';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <div className='full-page-container'>
-          <header>
-            <Header></Header>
-            <BottomHeader></BottomHeader>
-          </header>
-          <main className="spa-container">
-            <Routes >
-              <Route path="/" element={<Home />} />
-              <Route path="/licenciaturas" element={<AcademicOffer />} />
-              <Route path="/servicios" element={<Services />} />
-              <Route path="/alumnado/*" element={<AcademicServicesRouter />} />
-              <Route path="/academicos" element={<Faculties />} />
-              <Route path="/nosotros/*" element={<AboutRouter />} />
-            </Routes>
-            
-            <Footer />
-          </main>
+    <ContentProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="App">
+          <div className='full-page-container'>
+            <header>
+              <Header></Header>
+              <BottomHeader></BottomHeader>
+            </header>
+            <main className="spa-container">
+              <Routes >
+                <Route path="/" element={<Home />} />
+                <Route path="/licenciaturas" element={<AcademicOffer />} />
+                <Route path="/servicios" element={<Services />} />
+                <Route path="/alumnado/*" element={<AcademicServicesRouter />} />
+                <Route path="/academicos" element={<Faculties />} />
+                <Route path="/nosotros/*" element={<AboutRouter />} />
+              </Routes>
+
+              <Footer />
+            </main>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </ContentProvider>
+
 
   );
 }
