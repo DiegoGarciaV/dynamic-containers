@@ -24,7 +24,8 @@ export const ContentProvider = ({ children }) => {
         "HGFWEG": 'This is editable content for second element',
         "JKHERS": {
           content: 'La Escuela Nacional de Ciencias de la Tierra (ENCiT) tiene como objetivo formar profesionales capacitados para abordar los procesos terrestres relacionados con la exploración y gestión de los recursos naturales, así como los impactos ambientales de los procesos atmosféricos, oceánicos y de los cuerpos acuáticos. También se busca desarrollar habilidades en la exploración del espacio.',
-          containerType: 4,
+          containerType: 3,
+          emphasis: "none"
         },
       }
     }

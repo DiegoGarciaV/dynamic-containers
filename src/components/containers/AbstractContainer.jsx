@@ -2,7 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useContent } from '../contexts/DynamicContent';
 import styles from './AbstractContainer.module.css'
-import ParagraphContainer from './primitive-containers/ParagraphContainer';
+import ParagraphContainer from './primitive-containers/ParagraphContainer/ParagraphContainer';
+import TitleContainer from './primitive-containers/TitleContainer/TitleContainer';
+import SubtitleContainer from './primitive-containers/SubTitleContainer/SubTitleContainer'
+import SectionTitlecontainer from './primitive-containers/SectionTitleContainer/SectionTitleContainer'
 import RotaryLoader from '../ui-aux/RotaryLoader/RotaryLoader';
 
 const AbstractContainer = ({ containerId, children }) => {
@@ -15,25 +18,32 @@ const AbstractContainer = ({ containerId, children }) => {
   const typeOptions = [
     {
       id: 0,
-      label: "Titulo"
+      label: "Titulo de página"
     },
     {
       id: 1,
-      label: "Subtitulo"
+      label: "Titulo de sección"
     },
     {
       id: 2,
-      label: "Enfasis (Naranja)"
+      label: "Inicio de parrafo"
     },
     {
       id: 3,
-      label: "Enfasis (Verde)"
-    },
-    {
-      id: 4,
-      label: "Parrafos"
+      label: "Párrafos"
     },
   ]
+
+  const componentMap = {
+    0: TitleContainer,
+    1: SectionTitlecontainer,
+    2: SubtitleContainer,
+    3: ParagraphContainer,
+  };
+
+  const RenderedComponent = localContent
+    ? componentMap[localContent.containerType] || ParagraphContainer
+    : null;
 
   const handleDoubleClick = () => {
     if (!loading)
@@ -64,7 +74,8 @@ const AbstractContainer = ({ containerId, children }) => {
     setLocalContent(
       {
         containerType: localContent.containerType,
-        content: event.target.value
+        content: event.target.value,
+        emphasis: localContent.emphasis
       }
     );
   };
@@ -73,7 +84,18 @@ const AbstractContainer = ({ containerId, children }) => {
     setLocalContent(
       {
         containerType: event.target.value,
-        content: localContent.content
+        content: localContent.content,
+        emphasis: localContent.emphasis
+      }
+    );
+  };
+
+  const handleEmphasisChange = (event) => {
+    setLocalContent(
+      {
+        containerType: localContent.containerType,
+        content: localContent.content,
+        emphasis: event.target.value
       }
     );
   };
@@ -96,10 +118,16 @@ const AbstractContainer = ({ containerId, children }) => {
       {isEditing ? (
         <div className={styles.editContainer}>
           <div className='left-aligned'>
-            <select className={styles.contentType} onChange={handleTypeChange}>
+            <select className={styles.contentType} onChange={handleTypeChange} defaultValue={localContent.containerType}>
               {
                 typeOptions.map((element) => <option value={element.id} key={element.id}>{element.label}</option>)
               }
+            </select>
+            <select className={`${styles.emphasis} ${localContent.emphasis == "none" ? "" : localContent.emphasis === "orange" ? styles.emphasisOrange : localContent.emphasis === "black" ?  styles.emphasisBlack : styles.emphasisGreen}`} onChange={handleEmphasisChange} defaultValue={localContent.emphasis}>
+              <option className={styles.emphasisNone} value="none">Sin Enfasis</option>
+              <option className={styles.emphasisOrange}value="orange"></option>
+              <option className={styles.emphasisGreen} value="green"></option>
+              <option className={styles.emphasisBlack} value="black"></option>
             </select>
           </div>
 
@@ -116,12 +144,11 @@ const AbstractContainer = ({ containerId, children }) => {
           </div>
         </div>
 
-        //      ) : (children(localContent !== null ? ` ${localContent.content}` : `Loading...`))}
       ) : (
         localContent !== null ? (
-          <ParagraphContainer >
+          <RenderedComponent emphasis={localContent.emphasis}>
             {` ${localContent.content}`}
-          </ParagraphContainer>
+          </RenderedComponent>
         ) : (
           <RotaryLoader size="icon-sm"></RotaryLoader>
         )

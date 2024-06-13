@@ -135,3 +135,18 @@ p
 {
   text-align: justify !important;
 }
+
+.enfac-text-1{
+  color: var(--color-5) !important;
+  font-weight: 600 !important;
+}
+
+.enfac-text-2{
+  color: var(--color-3) !important;
+  font-weight: 600 !important;
+}
+
+.enfac-text-bl{
+  color: #000 !important;
+  font-weight: 600 !important;
+}

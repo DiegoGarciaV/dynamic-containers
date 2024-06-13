@@ -17,6 +17,39 @@
     border-radius: 5px;
 }
 
+.emphasis
+{
+    width: 8rem;
+    max-width: 100%;
+    padding: 0.35rem 0.25rem;
+    margin-bottom: var(--space-xxs);
+    border: none;
+    border-radius: 5px;
+}
+
+
+.emphasisOrange
+{
+    background-color: var(--color-5);
+    
+}
+
+.emphasisGreen
+{
+    background-color: var(--color-3);
+}   
+
+.emphasisBlack
+{
+    background-color: #000;
+}   
+
+
+.emphasisNone
+{
+    background-color: var(--color-1) !important;
+}
+
 .saveButton
 {
     width: 10rem;
@@ -38,3 +71,4 @@
     border-radius: 5px;
     padding: 1rem 0.5rem;
 }
+

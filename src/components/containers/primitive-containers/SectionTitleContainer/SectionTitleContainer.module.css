@@ -1,0 +1,23 @@
+.sectionTitle
+{
+    font-size: var(--font-size-md);
+    color: var(--color-0);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.underLined
+{
+    position: relative;
+}
+
+.underLined::after {
+    content: "";
+    width: var(--space-md);
+    height: 5px;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0px;
+    border-radius: 2px;font-size: var(--font-size-md);
+    background-color: var(--color-3);
+}
