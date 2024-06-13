@@ -150,3 +150,13 @@ p
   color: #000 !important;
   font-weight: 600 !important;
 }
+.cover-container
+{
+  padding-top: var(--space-lg);
+}
+
+.cover-container p {
+  text-align: justify;
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+}

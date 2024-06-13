@@ -6,7 +6,7 @@ const CarouselItem = ({ carouselItem }) => {
 
     return (
         <div className={styles.carouselItem}>
-            <Link to={carouselItem.url}>
+            <Link to={carouselItem.contentUrl}>
                 <div className={styles.carouselCard} style={{ backgroundImage: `url(${carouselItem.image})` }}>
                     <div className={styles.bluredCover}>
                         <img
@@ -27,7 +27,7 @@ CarouselItem.propTypes = {
     carouselItem: PropTypes.shape({
         id: PropTypes.number.isRequired,
         image: PropTypes.string,
-        url: PropTypes.string,
+        contentUrl: PropTypes.string,
         title: PropTypes.string,
         description: PropTypes.string
 

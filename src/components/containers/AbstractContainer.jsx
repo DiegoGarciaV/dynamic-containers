@@ -112,9 +112,12 @@ const AbstractContainer = ({ containerId, children }) => {
       setLocalContent(content[containerId])
   }, [content])
 
-
+  if (!loading && (localContent === null || localContent === undefined))
+    return (
+      <></>
+    )
   return (
-    <div onDoubleClick={handleDoubleClick} onTouchStart={handleDoubleTap}>
+    <div onDoubleClick={handleDoubleClick} onTouchStart={handleDoubleTap} className='w-100'>
       {isEditing ? (
         <div className={styles.editContainer}>
           <div className='left-aligned'>
@@ -123,9 +126,9 @@ const AbstractContainer = ({ containerId, children }) => {
                 typeOptions.map((element) => <option value={element.id} key={element.id}>{element.label}</option>)
               }
             </select>
-            <select className={`${styles.emphasis} ${localContent.emphasis == "none" ? "" : localContent.emphasis === "orange" ? styles.emphasisOrange : localContent.emphasis === "black" ?  styles.emphasisBlack : styles.emphasisGreen}`} onChange={handleEmphasisChange} defaultValue={localContent.emphasis}>
+            <select className={`${styles.emphasis} ${localContent.emphasis == "none" ? "" : localContent.emphasis === "orange" ? styles.emphasisOrange : localContent.emphasis === "black" ? styles.emphasisBlack : styles.emphasisGreen}`} onChange={handleEmphasisChange} defaultValue={localContent.emphasis}>
               <option className={styles.emphasisNone} value="none">Sin Enfasis</option>
-              <option className={styles.emphasisOrange}value="orange"></option>
+              <option className={styles.emphasisOrange} value="orange"></option>
               <option className={styles.emphasisGreen} value="green"></option>
               <option className={styles.emphasisBlack} value="black"></option>
             </select>
