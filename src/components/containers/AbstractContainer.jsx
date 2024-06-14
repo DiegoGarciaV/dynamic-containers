@@ -8,7 +8,7 @@ import SubtitleContainer from './primitive-containers/SubTitleContainer/SubTitle
 import SectionTitlecontainer from './primitive-containers/SectionTitleContainer/SectionTitleContainer'
 import RotaryLoader from '../ui-aux/RotaryLoader/RotaryLoader';
 
-const AbstractContainer = ({ containerId, children }) => {
+const AbstractContainer = ({ containerId, className }) => {
   const { content, saveChanges, loading } = useContent();
   const [isEditing, setIsEditing] = useState(false);
   const [localContent, setLocalContent] = useState(null);
@@ -110,7 +110,7 @@ const AbstractContainer = ({ containerId, children }) => {
   useEffect(() => {
     if (content !== null)
       setLocalContent(content[containerId])
-  }, [content])
+  }, [content, containerId])
 
   if (!loading && (localContent === null || localContent === undefined))
     return (
@@ -126,7 +126,7 @@ const AbstractContainer = ({ containerId, children }) => {
                 typeOptions.map((element) => <option value={element.id} key={element.id}>{element.label}</option>)
               }
             </select>
-            <select className={`${styles.emphasis} ${localContent.emphasis == "none" ? "" : localContent.emphasis === "orange" ? styles.emphasisOrange : localContent.emphasis === "black" ? styles.emphasisBlack : styles.emphasisGreen}`} onChange={handleEmphasisChange} defaultValue={localContent.emphasis}>
+            <select className={`${styles.emphasis} ${localContent.emphasis === "none" ? "" : localContent.emphasis === "orange" ? styles.emphasisOrange : localContent.emphasis === "black" ? styles.emphasisBlack : styles.emphasisGreen}`} onChange={handleEmphasisChange} defaultValue={localContent.emphasis}>
               <option className={styles.emphasisNone} value="none">Sin Enfasis</option>
               <option className={styles.emphasisOrange} value="orange"></option>
               <option className={styles.emphasisGreen} value="green"></option>
@@ -149,7 +149,7 @@ const AbstractContainer = ({ containerId, children }) => {
 
       ) : (
         localContent !== null ? (
-          <RenderedComponent emphasis={localContent.emphasis}>
+          <RenderedComponent emphasis={localContent.emphasis} className={className}>
             {` ${localContent.content}`}
           </RenderedComponent>
         ) : (
@@ -166,7 +166,7 @@ const AbstractContainer = ({ containerId, children }) => {
 
 AbstractContainer.propTypes = {
   containerId: PropTypes.string.isRequired,
-  children: PropTypes.func.isRequired
+  className: PropTypes.string.isRequired
 };
 
 export default AbstractContainer;

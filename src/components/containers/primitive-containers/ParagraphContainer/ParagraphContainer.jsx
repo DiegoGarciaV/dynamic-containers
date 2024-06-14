@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ParagraphContainer = ({ children, emphasis = "none" }) => {
+const ParagraphContainer = ({ children, emphasis = "none", className = "" }) => {
 
     const getEmphasis = () => {
-        if(emphasis=="orange")
+        if(emphasis==="orange")
             return "enfac-text-1"
-        if(emphasis=="green")
+        if(emphasis==="green")
             return "enfac-text-2"
-        if(emphasis=="black")
+        if(emphasis==="black")
             return "enfac-text-bl"
         return ""
     }
     return (
         <>
             {
-                children.split("\n").map((element, index) => <p className={getEmphasis()} key={"p_".concat(index)}>{element}</p>)
+                children.split("\n").map((element, index) => <p className={`${getEmphasis()} ${className}`} key={"p_".concat(index)}>{element}</p>)
             }
         </>
     );
@@ -23,7 +23,8 @@ const ParagraphContainer = ({ children, emphasis = "none" }) => {
 
 ParagraphContainer.propTypes = {
     children : PropTypes.string.isRequired,
-    emphasis: PropTypes.string
+    emphasis: PropTypes.string,
+    className: PropTypes.string
 };
 
 export default ParagraphContainer;
