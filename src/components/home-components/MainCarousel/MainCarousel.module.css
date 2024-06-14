@@ -17,8 +17,17 @@
 
 .carouselItem
 {
-    height: 75vh;
     background-color: var(--color-7);
     background-size: cover;
     background-position: center;
+}
+
+.large-carousel
+{
+    height: 75vh;
+}
+
+.small-carousel
+{
+    height: 45vh;
 }

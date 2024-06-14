@@ -150,6 +150,12 @@ p
   color: #000 !important;
   font-weight: 600 !important;
 }
+
+.bl-text
+{
+  font-weight: 450 !important;
+}
+
 .cover-container
 {
   padding-top: var(--space-lg);
@@ -159,4 +165,32 @@ p
   text-align: justify;
   font-size: var(--font-size-sm);
   font-weight: 300;
+}
+
+.to-focus {
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.to-focus:hover
+{
+    opacity: 1;
+}
+
+.blurred-cont-overlap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.blurred-cont {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.blurred-level-2-3 {
+  backdrop-filter: blur(2px) contrast(30%);
 }
