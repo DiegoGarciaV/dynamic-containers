@@ -150,6 +150,12 @@ p
   color: #000 !important;
   font-weight: 600 !important;
 }
+
+.bl-text
+{
+  font-weight: 450 !important;
+}
+
 .cover-container
 {
   padding-top: var(--space-lg);

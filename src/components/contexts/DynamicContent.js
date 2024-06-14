@@ -30,6 +30,21 @@ export const ContentProvider = ({ children }) => {
           content: 'La Escuela Nacional de Ciencias de la Tierra (ENCiT) tiene como objetivo formar profesionales capacitados para abordar los procesos terrestres relacionados con la exploración y gestión de los recursos naturales, así como los impactos ambientales de los procesos atmosféricos, oceánicos y de los cuerpos acuáticos. También se busca desarrollar habilidades en la exploración del espacio.\nLa UNAM busca fortalecer su oferta educativa en áreas que permiten comprender el planeta de manera integral, determinar el alcance y la magnitud de los cambios generados por el ser humano y los elementos naturales, y prevenir, en la medida de lo posible, sus efectos. La ENCiT ofrece una educación de calidad con un enfoque científico e interdisciplinario en áreas como Ciencias Acuáticas, Ciencias de la Atmósfera, Ciencias Ambientales, Ciencias Espaciales, Ciencias de la Tierra Sólida y Geografía Aplicada.',
           containerType: 3,
           emphasis: "none"
+        },
+        "contact_t": {
+          content: 'Información de contacto',
+          containerType: 1,
+          emphasis: "orange"
+        },
+        "contact_p": {
+          content: 'Si deseas ponerte en comunicación con la Escuela Nacional de Ciencias de la Tierra, ponemos a tu disposición los siguientes medios de contacto, nuestro horario de atención es de las 8:30 a 15:00 y de 17:00 a 18:00 horas',
+          containerType: 3,
+          emphasis: "none"
+        },
+        "contact_list": {
+          content: 'Circuito de la Investigación Científica S/N\nC.U. Coyoacán, 04510 CDMX\n5556224399, ext. 81951',
+          containerType: 3,
+          emphasis: "none"
         }
       }
     }

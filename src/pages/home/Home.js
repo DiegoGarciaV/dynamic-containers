@@ -5,13 +5,6 @@ import AbstractContainer from '../../components/containers/AbstractContainer';
 
 const mock_carousel = [
   {
-    id: 0,
-    image: require('../../assets/imgs/carousel/main/1a_carrera_encit.png'),
-    contentUrl: 'contents/servicios/docentes',
-    title: '',
-    description: ''
-  },
-  {
     id: 1,
     image: require('../../assets/imgs/carousel/main/carrera_tierra_movimiento.png'),
     contentUrl: 'documentos/estacionamientos.pdf',
@@ -56,7 +49,7 @@ const events = [
     description: ""
   },
   {
-    id:2,
+    id: 2,
     title: "",
     image: require("../../assets/imgs/carousel/notices/convoca_ecologia.png"),
     contentUrl: "eventos/",
@@ -70,7 +63,7 @@ const events = [
     description: ""
   },
   {
-    id:4,
+    id: 4,
     title: "",
     image: require("../../assets/imgs/carousel/notices/estacionamientos_0.png"),
     contentUrl: "eventos/",
@@ -84,14 +77,14 @@ const events = [
     description: ""
   },
   {
-    id:6,
+    id: 6,
     title: "",
     image: require("../../assets/imgs/carousel/notices/servicio_social.png"),
     contentUrl: "/alumnado/social",
     description: ""
   },
   {
-    id:7,
+    id: 7,
     title: "",
     image: require("../../assets/imgs/carousel/notices/reinscripciones24-1.png"),
     contentUrl: "/alumnado/escolares/reinscripcion",
@@ -141,8 +134,30 @@ const Home = () => (
         <InPageCarousel carouselItems={events}></InPageCarousel>
       </div>
     </div>
-      
+    <div className='cover-container'>
+      <div className='container-fluid h-100'>
+        <div className="row h-100 justify-content-evenly" id="contact-section">
+          <div className="col col-md-6 col-12">
+            <div className="d-flex flex-column justify-content-around  h-100 pe-5">
+              <AbstractContainer containerId='contact_t' className="pb-5"></AbstractContainer>
+              <AbstractContainer containerId='contact_p' className="mb-0"></AbstractContainer>
+              <div className="my-5">
+                <AbstractContainer containerId='contact_list' className='bl-text'></AbstractContainer>
+              </div>
+            </div>
+          </div>
+          <div className="col col-md-6 col-12">
+            <div className="d-flex flex-column justify-content-around align-items-center h-100">
+              <div id="map" className="w-100" >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
-);
+  
+    );
 
-export default Home;
+    export default Home;

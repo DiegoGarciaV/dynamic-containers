@@ -2,7 +2,7 @@
 {
     font-size: var(--font-size-md);
     color: var(--color-0);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-align: left;
 }
 
@@ -19,5 +19,14 @@
     bottom: -0.5rem;
     left: 0px;
     border-radius: 2px;font-size: var(--font-size-md);
+}
+
+.orangeUnderlined::after
+{
+    background-color: var(--color-5);
+}
+
+.greenUnderlined::after
+{
     background-color: var(--color-3);
 }
