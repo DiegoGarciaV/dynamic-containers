@@ -39,6 +39,20 @@ const mock_carousel = [
     title: '',
     description: ''
   },
+  {
+    id: 5,
+    image: require('../../assets/imgs/carousel/notices/nautilus_fotografia.jpg'),
+    contentUrl: 'documentos/estacionamientos.pdf',
+    title: '',
+    description: ''
+  },
+  {
+    id: 5,
+    image: require('../../assets/imgs/carousel/notices/nautilus_fotografia.jpg'),
+    contentUrl: 'documentos/estacionamientos.pdf',
+    title: 'Nautilus',
+    description: 'Nautilus'
+  }
 ];
 const events = [
   {

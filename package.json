@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@encit/web-ui-components": "git+https://$GITHUB_TOKEN@github.com/DiegoGarciaV/encit-front-ui-components.git#develop",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
-    "@encit/web-ui-components": "git+https://$GITHUB_TOKEN@github.com/DiegoGarciaV/encit-front-ui-components.git#feature/main-carousel",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.3.1",
