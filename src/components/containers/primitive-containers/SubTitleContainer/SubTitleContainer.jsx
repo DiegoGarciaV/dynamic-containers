@@ -5,11 +5,11 @@ import styles from './SubTitleContainer.module.css'
 const SubTitleContainer = ({ children, emphasis = "orange" }) => {
 
     const getEmphasis = () => {
-        if(emphasis=="orange")
+        if(emphasis==="orange")
             return "enfac-text-1"
-        if(emphasis=="green")
+        if(emphasis==="green")
             return "enfac-text-2"
-        if(emphasis=="black")
+        if(emphasis==="black")
             return "enfac-text-bl"
         return ""
     }
