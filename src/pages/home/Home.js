@@ -1,5 +1,5 @@
 import React from 'react';
-import MainCarousel from '../../components/home-components/MainCarousel/MainCarousel';
+import MainCarousel from '@encit/web-ui-components/MainCarousel';
 import InPageCarousel from '../../components/InPageCarousel/InPageCarousel';
 import AbstractContainer from '../../components/containers/AbstractContainer';
 

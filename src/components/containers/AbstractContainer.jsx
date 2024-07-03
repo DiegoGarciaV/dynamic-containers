@@ -6,7 +6,7 @@ import ParagraphContainer from './primitive-containers/ParagraphContainer/Paragr
 import TitleContainer from './primitive-containers/TitleContainer/TitleContainer';
 import SubtitleContainer from './primitive-containers/SubTitleContainer/SubTitleContainer'
 import SectionTitlecontainer from './primitive-containers/SectionTitleContainer/SectionTitleContainer'
-import {RotaryLoader} from 'encit-front-ui-components';
+import RotaryLoader from '@encit/web-ui-components/RotaryLoader';
 
 const AbstractContainer = ({ containerId, className }) => {
   const { content, saveChanges, loading } = useContent();
