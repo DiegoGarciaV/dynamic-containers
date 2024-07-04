@@ -1,6 +1,6 @@
 import React from 'react';
 import MainCarousel from '@encit/web-ui-components/MainCarousel';
-import InPageCarousel from '../../components/InPageCarousel/InPageCarousel';
+import InPageCarousel from '@encit/web-ui-components/InPageCarousel';
 import AbstractContainer from '../../components/containers/AbstractContainer';
 
 const mock_carousel = [
