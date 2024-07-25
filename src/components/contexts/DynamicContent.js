@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const URI_ROOT = "http://localhost:8090/api/contents"
+const URI_ROOT = "http://localhost:8080/api/content"
 const ContentContext = createContext();
 
 export const ContentProvider = ({ children }) => {
@@ -52,7 +52,30 @@ export const ContentProvider = ({ children }) => {
 
   }
 
+  const getCarousels = async () => {
+
+    try {
+      const response = await fetch(`${URI_ROOT}/carousel/`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+      const contents = await response.json();
+      const carousels = contents.map((carousel) => ({
+        carouselId: carousel.carouselId,
+        carouselItems: carousel.carouselItems.map((item) => ({...item, image: require(`../../assets/imgs/${item.image}`)}))
+      }));
+      return carousels;
+    }
+    catch (error) {
+      return []
+    }
+
+
+  }
   const [content, setContent] = useState(null);
+  const [carousels, setCarousels] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -70,6 +93,16 @@ export const ContentProvider = ({ children }) => {
       } finally {
         setLoading(false);
       }
+
+      try {
+        const data = await getCarousels();
+        console.log(data)
+        if (data) {
+          setCarousels(data);
+        } 
+      } catch (err) {
+        console.log(err)
+      } 
     };
 
     fetchData();
@@ -100,7 +133,7 @@ export const ContentProvider = ({ children }) => {
   };
 
   return (
-    <ContentContext.Provider value={{ content, saveChanges, loading, error }}>
+    <ContentContext.Provider value={{ content, carousels, saveChanges, loading, error }}>
       {children}
     </ContentContext.Provider>
   );
