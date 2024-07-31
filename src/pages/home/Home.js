@@ -53,7 +53,7 @@ const Home = () => {
       <div className='cover-container'>
         <div className='container-fluid h-100'>
           <h2 className="container-title">Avisos</h2>
-          {localCarousels !== null ? (<InPageCarousel carouselItems={localCarousels[1].carouselItems} size='sm'></InPageCarousel>) : <RotaryLoader size="icon-lg"></RotaryLoader>}
+          {localCarousels !== null ? (<InPageCarousel carouselItems={localCarousels[1].carouselItems} size='sm'></InPageCarousel>) : <RotaryLoader size="icon-md"></RotaryLoader>}
         </div>
       </div>
       <div className='cover-container'>

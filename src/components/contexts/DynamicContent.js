@@ -69,7 +69,7 @@ export const ContentProvider = ({ children }) => {
       return carousels;
     }
     catch (error) {
-      return []
+      return null
     }
 
 
